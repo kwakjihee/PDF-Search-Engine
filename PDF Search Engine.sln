@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34009.444
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDF Search Engine", "PDF Search Engine\PDF Search Engine.csproj", "{8BB2E7E5-FA8A-466A-A4C9-D87060A2FB1E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8BB2E7E5-FA8A-466A-A4C9-D87060A2FB1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BB2E7E5-FA8A-466A-A4C9-D87060A2FB1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BB2E7E5-FA8A-466A-A4C9-D87060A2FB1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BB2E7E5-FA8A-466A-A4C9-D87060A2FB1E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {73CF2D2E-B59C-4E3E-BDE3-17E061FC3102}
+	EndGlobalSection
+EndGlobal

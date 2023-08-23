@@ -1,0 +1,17 @@
+﻿<Window x:Class="PDFSearchApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="PDF Search App" Height="350" Width="525">
+    <Grid>
+        <TextBox Name="searchTextBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="300" Margin="10" KeyDown="searchTextBox_KeyDown" />
+        <Button Content="Search" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="320,10,0,0" Click="SearchButton_Click" />
+        <ListView Name="resultListView" HorizontalAlignment="Left" VerticalAlignment="Top" Width="500" Height="250" Margin="10,40,0,0">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="File Name" DisplayMemberBinding="{Binding FileName}" />
+                    <GridViewColumn Header="File Path" DisplayMemberBinding="{Binding FilePath}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

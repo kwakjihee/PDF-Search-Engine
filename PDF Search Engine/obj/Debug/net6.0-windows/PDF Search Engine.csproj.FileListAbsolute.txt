@@ -1,0 +1,23 @@
+C:\Users\klob\Desktop\PDF Search Engine\PDF Search Engine\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\klob\Desktop\PDF Search Engine\PDF Search Engine\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\klob\Desktop\PDF Search Engine\PDF Search Engine\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\klob\Desktop\PDF Search Engine\PDF Search Engine\obj\Debug\net6.0-windows\PDF Search Engine_MarkupCompile.cache
+C:\Users\klob\Desktop\PDF Search Engine\PDF Search Engine\obj\Debug\net6.0-windows\PDF Search Engine.g.resources
+C:\Users\klob\Desktop\PDF Search Engine\PDF Search Engine\obj\Debug\net6.0-windows\PDF Search Engine.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\klob\Desktop\PDF Search Engine\PDF Search Engine\obj\Debug\net6.0-windows\PDF Search Engine.AssemblyInfoInputs.cache
+C:\Users\klob\Desktop\PDF Search Engine\PDF Search Engine\obj\Debug\net6.0-windows\PDF Search Engine.AssemblyInfo.cs
+C:\Users\klob\Desktop\PDF Search Engine\PDF Search Engine\obj\Debug\net6.0-windows\PDF Search Engine.csproj.CoreCompileInputs.cache
+C:\Users\klob\Desktop\PDF Search Engine\PDF Search Engine\bin\Debug\net6.0-windows\PDF Search Engine.exe
+C:\Users\klob\Desktop\PDF Search Engine\PDF Search Engine\bin\Debug\net6.0-windows\PDF Search Engine.deps.json
+C:\Users\klob\Desktop\PDF Search Engine\PDF Search Engine\bin\Debug\net6.0-windows\PDF Search Engine.runtimeconfig.json
+C:\Users\klob\Desktop\PDF Search Engine\PDF Search Engine\bin\Debug\net6.0-windows\PDF Search Engine.dll
+C:\Users\klob\Desktop\PDF Search Engine\PDF Search Engine\bin\Debug\net6.0-windows\PDF Search Engine.pdb
+C:\Users\klob\Desktop\PDF Search Engine\PDF Search Engine\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+C:\Users\klob\Desktop\PDF Search Engine\PDF Search Engine\bin\Debug\net6.0-windows\itextsharp.dll
+C:\Users\klob\Desktop\PDF Search Engine\PDF Search Engine\obj\Debug\net6.0-windows\PDF Search Engine.csproj.AssemblyReference.cache
+C:\Users\klob\Desktop\PDF Search Engine\PDF Search Engine\obj\Debug\net6.0-windows\PDF Search Engine.csproj.CopyComplete
+C:\Users\klob\Desktop\PDF Search Engine\PDF Search Engine\obj\Debug\net6.0-windows\PDF Search Engine.dll
+C:\Users\klob\Desktop\PDF Search Engine\PDF Search Engine\obj\Debug\net6.0-windows\refint\PDF Search Engine.dll
+C:\Users\klob\Desktop\PDF Search Engine\PDF Search Engine\obj\Debug\net6.0-windows\PDF Search Engine.pdb
+C:\Users\klob\Desktop\PDF Search Engine\PDF Search Engine\obj\Debug\net6.0-windows\PDF Search Engine.genruntimeconfig.cache
+C:\Users\klob\Desktop\PDF Search Engine\PDF Search Engine\obj\Debug\net6.0-windows\ref\PDF Search Engine.dll
