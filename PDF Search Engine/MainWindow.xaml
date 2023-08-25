@@ -8,7 +8,7 @@
         <TextBox Name="directoryPathTextBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="300" Margin="15,19,0,0" IsReadOnly="True" />
         <Button Content="Select Directory" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="325,19,0,0" Click="SelectDirectoryButton_Click" />
         <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Margin="10,80,10,10">
-            <ListView Name="resultListView" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <ListView Name="resultListView" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MouseDoubleClick="ResultListView_MouseDoubleClick">
                 <ListView.View>
                     <GridView>
                         <GridView.ColumnHeaderContainerStyle>

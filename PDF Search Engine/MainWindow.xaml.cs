@@ -7,6 +7,7 @@ using Microsoft.Win32;
 using iTextSharp.text.pdf;
 using iTextSharp.text.pdf.parser;
 using Microsoft.WindowsAPICodePack.Dialogs;
+using System.Diagnostics;
 
 namespace PDFSearchApp
 {
@@ -106,6 +107,36 @@ namespace PDFSearchApp
             return (string.Empty, string.Empty);
         }
 
+        private void ResultListView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (resultListView.SelectedItem is PDFFile selectedPDF)
+            {
+                try
+                {
+                    Process.Start(new ProcessStartInfo
+                    {
+                        FileName = selectedPDF.FilePath,
+                        UseShellExecute = true
+                    });
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error opening file: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+        }
+        private void TryOpenFile(string filePath)
+        {
+            try
+            {
+                Process.Start(filePath);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error opening file: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
         private void searchTextBox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Enter)
@@ -151,10 +182,10 @@ namespace PDFSearchApp
 
     public class PDFFile
     {
-        public string FileName { get; set; }
-        public string FilePath { get; set; }
-        public string AdditionalInfoBefore { get; set; }
-        public string Keyword { get; set; }
-        public string AdditionalInfoAfter { get; set; }
+        public string? FileName { get; set; }
+        public string? FilePath { get; set; }
+        public string? AdditionalInfoBefore { get; set; }
+        public string? Keyword { get; set; }
+        public string? AdditionalInfoAfter { get; set; }
     }
 }
