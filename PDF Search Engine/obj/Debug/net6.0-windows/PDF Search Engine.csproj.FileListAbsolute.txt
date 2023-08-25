@@ -21,3 +21,6 @@ C:\Users\klob\Desktop\PDF Search Engine\PDF Search Engine\obj\Debug\net6.0-windo
 C:\Users\klob\Desktop\PDF Search Engine\PDF Search Engine\obj\Debug\net6.0-windows\PDF Search Engine.pdb
 C:\Users\klob\Desktop\PDF Search Engine\PDF Search Engine\obj\Debug\net6.0-windows\PDF Search Engine.genruntimeconfig.cache
 C:\Users\klob\Desktop\PDF Search Engine\PDF Search Engine\obj\Debug\net6.0-windows\ref\PDF Search Engine.dll
+C:\Users\klob\Desktop\PDF Search Engine\PDF Search Engine\bin\Debug\net6.0-windows\Microsoft.WindowsAPICodePack.dll
+C:\Users\klob\Desktop\PDF Search Engine\PDF Search Engine\bin\Debug\net6.0-windows\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\klob\Desktop\PDF Search Engine\PDF Search Engine\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs

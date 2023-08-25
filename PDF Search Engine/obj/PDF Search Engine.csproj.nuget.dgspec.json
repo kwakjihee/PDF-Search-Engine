@@ -40,6 +40,14 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "dependencies": {
+            "Microsoft.WindowsAPICodePack.Core": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Microsoft.WindowsAPICodePack.Shell": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
             "iTextSharp": {
               "target": "Package",
               "version": "[5.5.13.3, )"

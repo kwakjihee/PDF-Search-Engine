@@ -22,6 +22,27 @@
         "runtime": {
           "lib/itextsharp.dll": {}
         }
+      },
+      "Microsoft.WindowsAPICodePack.Core/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/Microsoft.WindowsAPICodePack.dll": {}
+        },
+        "runtime": {
+          "lib/Microsoft.WindowsAPICodePack.dll": {}
+        }
+      },
+      "Microsoft.WindowsAPICodePack.Shell/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.WindowsAPICodePack.Core": "1.1.0"
+        },
+        "compile": {
+          "lib/Microsoft.WindowsAPICodePack.Shell.dll": {}
+        },
+        "runtime": {
+          "lib/Microsoft.WindowsAPICodePack.Shell.dll": {}
+        }
       }
     }
   },
@@ -54,10 +75,36 @@
         "lib/itextsharp.dll",
         "notice.txt"
       ]
+    },
+    "Microsoft.WindowsAPICodePack.Core/1.1.0": {
+      "sha512": "szH5i6kUEuukCJN2vxPKRKvrTrtb759ScSWvlzN0lA9LNfZZQiauqqE5UrMZUdt5GzlJFSHfHkdcIe4qEC7Z1A==",
+      "type": "package",
+      "path": "microsoft.windowsapicodepack.core/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/Microsoft.WindowsAPICodePack.dll",
+        "microsoft.windowsapicodepack.core.1.1.0.nupkg.sha512",
+        "microsoft.windowsapicodepack.core.nuspec"
+      ]
+    },
+    "Microsoft.WindowsAPICodePack.Shell/1.1.0": {
+      "sha512": "mf++Hez9kbikfIuwz4uCdQRwJDpd38rCD/F5CWU78tzyZtpEsUR6oWOX8ea59XvQ3hLitm2zZe3fXEgTD5Qyxg==",
+      "type": "package",
+      "path": "microsoft.windowsapicodepack.shell/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/Microsoft.WindowsAPICodePack.Shell.dll",
+        "microsoft.windowsapicodepack.shell.1.1.0.nupkg.sha512",
+        "microsoft.windowsapicodepack.shell.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
+      "Microsoft.WindowsAPICodePack.Core >= 1.1.0",
+      "Microsoft.WindowsAPICodePack.Shell >= 1.1.0",
       "iTextSharp >= 5.5.13.3"
     ]
   },
@@ -100,6 +147,14 @@
       "net6.0-windows7.0": {
         "targetAlias": "net6.0-windows",
         "dependencies": {
+          "Microsoft.WindowsAPICodePack.Core": {
+            "target": "Package",
+            "version": "[1.1.0, )"
+          },
+          "Microsoft.WindowsAPICodePack.Shell": {
+            "target": "Package",
+            "version": "[1.1.0, )"
+          },
           "iTextSharp": {
             "target": "Package",
             "version": "[5.5.13.3, )"
@@ -145,6 +200,26 @@
       "warningLevel": 1,
       "message": "프로젝트 대상 프레임워크 'net6.0-windows7.0' 대신 '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1'을(를) 사용하여 패키지 'iTextSharp 5.5.13.3'을(를) 복원했습니다. 이 패키지는 프로젝트와 완벽하게 호환되지 않을 수 있습니다.",
       "libraryId": "iTextSharp",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "프로젝트 대상 프레임워크 'net6.0-windows7.0' 대신 '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1'을(를) 사용하여 패키지 'Microsoft.WindowsAPICodePack.Core 1.1.0'을(를) 복원했습니다. 이 패키지는 프로젝트와 완벽하게 호환되지 않을 수 있습니다.",
+      "libraryId": "Microsoft.WindowsAPICodePack.Core",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "프로젝트 대상 프레임워크 'net6.0-windows7.0' 대신 '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1'을(를) 사용하여 패키지 'Microsoft.WindowsAPICodePack.Shell 1.1.0'을(를) 복원했습니다. 이 패키지는 프로젝트와 완벽하게 호환되지 않을 수 있습니다.",
+      "libraryId": "Microsoft.WindowsAPICodePack.Shell",
       "targetGraphs": [
         "net6.0-windows7.0"
       ]
