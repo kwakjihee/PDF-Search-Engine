@@ -1,13 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "yHh9/UYZ2m/u4b9OoTzd9djM3MrERV/Ud6HacNv2HYhhK+iutmqCFkwHOpEB0UWInufKw7Fhs7Q50wXL4Jwj2w==",
+  "dgSpecHash": "QNoMYMOhVeogSlSpgew4a/HmydkJtNylcbohyyMG2/0zxtJrxSTuZTd+L4HmIHeYZbJkD4fhJe1h3KGo1rCPFQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\klob\\Desktop\\PDF Search Engine\\PDF Search Engine\\PDF Search Engine.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\klob\\.nuget\\packages\\bouncycastle\\1.8.9\\bouncycastle.1.8.9.nupkg.sha512",
     "C:\\Users\\klob\\.nuget\\packages\\itextsharp\\5.5.13.3\\itextsharp.5.5.13.3.nupkg.sha512",
     "C:\\Users\\klob\\.nuget\\packages\\microsoft.windowsapicodepack.core\\1.1.0\\microsoft.windowsapicodepack.core.1.1.0.nupkg.sha512",
-    "C:\\Users\\klob\\.nuget\\packages\\microsoft.windowsapicodepack.shell\\1.1.0\\microsoft.windowsapicodepack.shell.1.1.0.nupkg.sha512"
+    "C:\\Users\\klob\\.nuget\\packages\\microsoft.windowsapicodepack.shell\\1.1.0\\microsoft.windowsapicodepack.shell.1.1.0.nupkg.sha512",
+    "C:\\Users\\klob\\.nuget\\packages\\pdfsharp\\1.50.5147\\pdfsharp.1.50.5147.nupkg.sha512"
   ],
   "logs": [
     {
@@ -46,6 +47,16 @@
       "warningLevel": 1,
       "message": "프로젝트 대상 프레임워크 'net6.0-windows7.0' 대신 '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1'을(를) 사용하여 패키지 'Microsoft.WindowsAPICodePack.Shell 1.1.0'을(를) 복원했습니다. 이 패키지는 프로젝트와 완벽하게 호환되지 않을 수 있습니다.",
       "libraryId": "Microsoft.WindowsAPICodePack.Shell",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "프로젝트 대상 프레임워크 'net6.0-windows7.0' 대신 '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1'을(를) 사용하여 패키지 'PDFsharp 1.50.5147'을(를) 복원했습니다. 이 패키지는 프로젝트와 완벽하게 호환되지 않을 수 있습니다.",
+      "libraryId": "PDFsharp",
       "targetGraphs": [
         "net6.0-windows7.0"
       ]

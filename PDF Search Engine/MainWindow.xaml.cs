@@ -1,12 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
+using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
-using Microsoft.Win32;
+using Microsoft.WindowsAPICodePack.Dialogs;
 using iTextSharp.text.pdf;
 using iTextSharp.text.pdf.parser;
-using Microsoft.WindowsAPICodePack.Dialogs;
 using System.Diagnostics;
 
 namespace PDFSearchApp
@@ -14,11 +17,13 @@ namespace PDFSearchApp
     public partial class MainWindow : Window
     {
         public ObservableCollection<PDFFile> PDFFiles { get; set; } = new ObservableCollection<PDFFile>();
+        private List<string> searchHistory = new List<string>();
 
         public MainWindow()
         {
             InitializeComponent();
             resultListView.ItemsSource = PDFFiles;
+            LoadSearchHistory();
         }
 
         private void SearchButton_Click(object sender, RoutedEventArgs e)
@@ -28,6 +33,8 @@ namespace PDFSearchApp
             if (!string.IsNullOrEmpty(searchKeyword) && !string.IsNullOrEmpty(directoryPath))
             {
                 SearchKeywordAndUpdateResults(searchKeyword, directoryPath);
+                AddToSearchHistory(searchKeyword);
+                SaveSearchHistory();
             }
             else
             {
@@ -111,31 +118,25 @@ namespace PDFSearchApp
         {
             if (resultListView.SelectedItem is PDFFile selectedPDF)
             {
-                try
-                {
-                    Process.Start(new ProcessStartInfo
-                    {
-                        FileName = selectedPDF.FilePath,
-                        UseShellExecute = true
-                    });
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Error opening file: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
+                TryOpenFile(selectedPDF.FilePath);
             }
         }
         private void TryOpenFile(string filePath)
         {
             try
             {
-                Process.Start(filePath);
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = filePath,
+                    UseShellExecute = true
+                });
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error opening file: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
 
         private void searchTextBox_KeyDown(object sender, KeyEventArgs e)
         {
@@ -146,6 +147,8 @@ namespace PDFSearchApp
                 if (!string.IsNullOrEmpty(searchKeyword) && !string.IsNullOrEmpty(directoryPath))
                 {
                     SearchKeywordAndUpdateResults(searchKeyword, directoryPath);
+                    AddToSearchHistory(searchKeyword);
+                    SaveSearchHistory();
                 }
                 else
                 {
@@ -178,8 +181,86 @@ namespace PDFSearchApp
 
             return string.Empty;
         }
+
+        private void searchTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string searchText = searchTextBox.Text;
+
+            if (!string.IsNullOrEmpty(searchText))
+            {
+                var matchingHistory = searchHistory.Where(item => item.StartsWith(searchText, StringComparison.OrdinalIgnoreCase));
+                autoCompletionListBox.ItemsSource = matchingHistory;
+                autoCompletionListBox.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                autoCompletionListBox.ItemsSource = null; // Clear the item source
+                autoCompletionListBox.Visibility = Visibility.Collapsed;
+            }
+        }
+
+        private void searchTextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            autoCompletionListBox.Visibility = Visibility.Visible;
+            UpdateAutoCompletionListBox();
+        }
+
+        private void UpdateAutoCompletionListBox()
+        {
+            string searchText = searchTextBox.Text;
+
+            if (!string.IsNullOrEmpty(searchText))
+            {
+                var matchingHistory = searchHistory.Where(item => item.StartsWith(searchText, StringComparison.OrdinalIgnoreCase));
+                autoCompletionListBox.ItemsSource = matchingHistory;
+            }
+            else
+            {
+                autoCompletionListBox.ItemsSource = null;
+            }
+        }
+
+
+        private void AutoCompletionListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (autoCompletionListBox.SelectedItem is string selectedHistory)
+            {
+                searchTextBox.Text = selectedHistory;
+                autoCompletionListBox.Visibility = Visibility.Collapsed;
+            }
+        }
+
+        private void AddToSearchHistory(string searchKeyword)
+        {
+            if (!searchHistory.Contains(searchKeyword, StringComparer.OrdinalIgnoreCase))
+            {
+                searchHistory.Add(searchKeyword);
+            }
+        }
+
+        private void SaveSearchHistory()
+        {
+            using (FileStream fs = new FileStream("SearchHistory.dat", FileMode.Create))
+            {
+                BinaryFormatter formatter = new BinaryFormatter();
+                formatter.Serialize(fs, searchHistory);
+            }
+        }
+
+        private void LoadSearchHistory()
+        {
+            if (File.Exists("SearchHistory.dat"))
+            {
+                using (FileStream fs = new FileStream("SearchHistory.dat", FileMode.Open))
+                {
+                    BinaryFormatter formatter = new BinaryFormatter();
+                    searchHistory = (List<string>)formatter.Deserialize(fs);
+                }
+            }
+        }
     }
 
+    [Serializable]
     public class PDFFile
     {
         public string? FileName { get; set; }

@@ -23,4 +23,7 @@ C:\Users\klob\Desktop\PDF Search Engine\PDF Search Engine\obj\Debug\net6.0-windo
 C:\Users\klob\Desktop\PDF Search Engine\PDF Search Engine\obj\Debug\net6.0-windows\ref\PDF Search Engine.dll
 C:\Users\klob\Desktop\PDF Search Engine\PDF Search Engine\bin\Debug\net6.0-windows\Microsoft.WindowsAPICodePack.dll
 C:\Users\klob\Desktop\PDF Search Engine\PDF Search Engine\bin\Debug\net6.0-windows\Microsoft.WindowsAPICodePack.Shell.dll
-C:\Users\klob\Desktop\PDF Search Engine\PDF Search Engine\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\klob\Desktop\PDF Search Engine\PDF Search Engine\bin\Debug\net6.0-windows\PdfSharp.Charting.dll
+C:\Users\klob\Desktop\PDF Search Engine\PDF Search Engine\bin\Debug\net6.0-windows\PdfSharp.dll
+C:\Users\klob\Desktop\PDF Search Engine\PDF Search Engine\bin\Debug\net6.0-windows\de\PdfSharp.Charting.resources.dll
+C:\Users\klob\Desktop\PDF Search Engine\PDF Search Engine\bin\Debug\net6.0-windows\de\PdfSharp.resources.dll

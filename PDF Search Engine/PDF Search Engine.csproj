@@ -12,6 +12,7 @@
 		<PackageReference Include="iTextSharp" Version="5.5.13.3" />
 		<PackageReference Include="Microsoft.WindowsAPICodePack.Core" Version="1.1.0" />
 		<PackageReference Include="Microsoft.WindowsAPICodePack.Shell" Version="1.1.0" />
+		<PackageReference Include="PdfSharp" Version="1.50.5147" />
 	</ItemGroup>
 
 </Project>
